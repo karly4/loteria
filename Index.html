@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lotería de Multiplicar Manual</title>
+  <link href="./style/lib/bootstrap.min.css" rel="stylesheet">
+ 
+  <link href="./style/style.css" rel="stylesheet">
+ <script src="./js/bootstrap.bundle.min.js"></script>
+
+</head>
+<body>
+<div class=" container text-center">
+
+
+  <h1>Lotería de Tablas de Multiplicar</h1>
+  <!-- Configuración de reglas -->
+  <label for="rule">Regla de victoria:</label>
+  <select id="rule">
+    <option value="fila">Fila completa</option>
+    <option value="columna">Columna completa</option>
+    <option value="diagonal">Diagonal</option>
+    <option value="tablero">Todo el tablero</option>
+  </select>
+
+  <div id="drawn">Operación sorteada: -</div>
+  
+<div>
+  <button onclick="drawOperation()">Sacar operación</button>
+  <button onclick="newGame()">Nueva partida</button>
+</div>
+
+<div class="container-sm">
+  <div class="row">
+    <div class="col-6">
+      <h2>Jugador 1</h2>
+       <div id="grid1" class="gridLoteria text-center" style="row-gap: 0;"> 
+      </div>
+  </div>
+  <!-- <div class="board">
+    <h2>Jugador 2</h2>
+    <div id="grid2" class="gridLoteria"></div>
+  </div> -->
+   <div id="row history" class="col-6">
+    <h3>Historial de operaciones</h3>
+    <ul id="historyList"></ul>
+    <p>Total sorteadas: <span id="counter">0</span></p>
+  </div>
+</div>
+    </div>
+    
+  <!-- Historial -->
+ 
+  </div>
+   <script src="./js/config1.js"></script>
+  <!-- Lógica principal -->
+  <script src="./js/reglas.js"></script>
+</body>
+</html>
